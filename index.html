@@ -128,18 +128,6 @@
                 <a href="#" class="font-medium hover:text-primary">Tentang</a>
                 <a href="#" class="font-medium hover:text-primary">Kontak</a>
             </nav>
-            <div class="flex items-center space-x-4">
-                <button class="p-2 rounded-full hover:bg-gray-100">
-                    <i class="fas fa-search text-gray-600"></i>
-                </button>
-                <button class="p-2 rounded-full hover:bg-gray-100">
-                    <i class="fas fa-shopping-cart text-gray-600"></i>
-                    <span class="absolute top-2 right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
-                </button>
-                <button class="md:hidden p-2 rounded-full hover:bg-gray-100">
-                    <i class="fas fa-bars text-gray-600"></i>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -149,29 +137,29 @@
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Product Gallery -->
             <div class="lg:w-1/2">
-                <div class="mb-4 rounded-lg overflow-hidden bg-white p-4 shadow-sm">
+                <div class="mb-4 rounded-lg overflow-hidden bg-white p-4 shadow-sm cursor-pointer" onclick="openLightbox('https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633', 'image')">
                     <img id="mainImage" src="https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633" alt="Tank Top Wanita" class="w-full rounded-lg object-cover">
                 </div>
                 <div class="grid grid-cols-4 md:grid-cols-7 gap-2">
-                    <div class="product-gallery-thumbnail active" onclick="changeImage('https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633')">
+                    <div class="product-gallery-thumbnail active" onclick="changeImage('https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633'); openLightbox('https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633', 'image')">
                         <img src="https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_360x.jpg?v=1741940617" alt="Thumbnail 1" class="w-full h-20 object-cover rounded">
                     </div>
-                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_360x.jpg?v=1741940617')">
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_360x.jpg?v=1741940617'); openLightbox('https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_720x.jpg?v=1741233633', 'image')">
                         <img src="https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_360x.jpg?v=1741940617" alt="Thumbnail 2" class="w-full h-20 object-cover rounded">
                     </div>
-                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_360x.jpg?v=1741940617')">
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_360x.jpg?v=1741940617'); openLightbox('https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_720x.jpg?v=1741233633', 'image')">
                         <img src="https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_360x.jpg?v=1741940617" alt="Thumbnail 3" class="w-full h-20 object-cover rounded">
                     </div>
-                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_360x.jpg?v=1741940617')">
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_360x.jpg?v=1741940617'); openLightbox('https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_720x.jpg?v=1741233633', 'image')">
                         <img src="https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_360x.jpg?v=1741940617" alt="Thumbnail 4" class="w-full h-20 object-cover rounded">
                     </div>
-                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_360x.jpg?v=1741940617')">
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_360x.jpg?v=1741940617'); openLightbox('https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_720x.jpg?v=1741233633', 'image')">
                         <img src="https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_360x.jpg?v=1741940617" alt="Thumbnail 5" class="w-full h-20 object-cover rounded">
                     </div>
-                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_360x.jpg?v=1741940617')">
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_360x.jpg?v=1741940617'); openLightbox('https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_720x.jpg?v=1741233633', 'image')">
                         <img src="https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_360x.jpg?v=1741940617" alt="Thumbnail 6" class="w-full h-20 object-cover rounded">
                     </div>
-                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_360x.jpg?v=1741940617')">
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_360x.jpg?v=1741940617'); openLightbox('https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_720x.jpg?v=1741233633', 'image')">
                         <img src="https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_360x.jpg?v=1741940617" alt="Thumbnail 7" class="w-full h-20 object-cover rounded">
                     </div>
                 </div>
