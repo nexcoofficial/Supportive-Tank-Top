@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tank Top Wanita Dengan Cup Bra Empuk - greney.underwear.id</title>
+    <title>Tank Top Wanita dengan Cup Bra Empuk | Greney</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -11,11 +11,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#1d4ed8',
-                        accent: '#25d366',
-                        dark: '#1e293b',
-                        light: '#f8fafc',
+                        'primary': '#1e40af',
+                        'secondary': '#3b82f6',
+                        'accent': '#f97316',
                     }
                 }
             }
@@ -25,490 +23,469 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         body {
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-            margin: 0;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
         
-        .product-gallery-main {
-            transition: opacity 0.3s ease;
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
         }
         
-        .gallery-thumb {
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-video {
+            width: 90%;
+            max-width: 800px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+        .color-option {
+            transition: all 0.3s ease;
+        }
+        
+        .color-option:hover, .color-option.active {
+            transform: scale(1.1);
+            border: 2px solid #3b82f6;
+        }
+        
+        .size-option {
             transition: all 0.2s ease;
         }
         
-        .gallery-thumb:hover, .gallery-thumb.active {
+        .size-option:hover, .size-option.active {
+            background-color: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+        
+        .testimonial-thumbnail {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .testimonial-thumbnail:hover {
             transform: scale(1.05);
         }
         
-        .payment-btn {
+        .product-gallery-thumbnail {
             transition: all 0.2s ease;
+            cursor: pointer;
         }
         
-        .whatsapp-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        .product-gallery-thumbnail:hover, .product-gallery-thumbnail.active {
+            border: 2px solid #3b82f6;
         }
         
-        .summary-row:last-child {
-            border-bottom: none;
+        .strikethrough {
+            position: relative;
         }
         
-        .slide-in {
-            animation: slideIn 0.3s ease-out forwards;
-        }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.4s ease-in forwards;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .strikethrough::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #ef4444;
+            transform: translateY(-50%);
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-gray-50">
     <!-- Header -->
-    <header class="bg-white py-4 shadow-md">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="https://down-id.img.susercontent.com/file/id-11134216-7r98p-llostwynkdrf83" alt="greney logo" class="h-10">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
                 <div class="flex items-center">
-                    <span class="text-gray-800 text-xl md:text-2xl font-bold tracking-tight">greney.underwear.id</span>
-                    <i class="fas fa-check-circle text-blue-500 ml-2 text-lg"></i>
+                    <img src="https://down-id.img.susercontent.com/file/id-11134216-7r98p-llostwynkdrf83" alt="Store Logo" class="h-8">
                 </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="font-medium hover:text-primary">Beranda</a>
+                <a href="#" class="font-medium hover:text-primary">Produk</a>
+                <a href="#" class="font-medium hover:text-primary">Koleksi</a>
+                <a href="#" class="font-medium hover:text-primary">Tentang</a>
+                <a href="#" class="font-medium hover:text-primary">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-search text-gray-600"></i>
+                </button>
+                <button class="p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-shopping-cart text-gray-600"></i>
+                    <span class="absolute top-2 right-2 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                </button>
+                <button class="md:hidden p-2 rounded-full hover:bg-gray-100">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="py-8">
-        <div class="container mx-auto px-4">
-            <!-- Breadcrumb -->
-            <div class="mb-6 text-sm text-gray-600">
-                <a href="#" class="text-primary hover:underline">Home</a> 
-                <span class="mx-2">/</span>
-                <a href="#" class="text-primary hover:underline">Produk</a>
-                <span class="mx-2">/</span>
-                <span>Tank Top Wanita Dengan Cup Bra Empuk</span>
+    <main class="container mx-auto px-4 py-8">
+        <!-- Product Section -->
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Product Gallery -->
+            <div class="lg:w-1/2">
+                <div class="mb-4 rounded-lg overflow-hidden bg-white p-4 shadow-sm">
+                    <img id="mainImage" src="https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633" alt="Tank Top Wanita" class="w-full rounded-lg object-cover">
+                </div>
+                <div class="grid grid-cols-4 md:grid-cols-7 gap-2">
+                    <div class="product-gallery-thumbnail active" onclick="changeImage('https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633')">
+                        <img src="https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_360x.jpg?v=1741940617" alt="Thumbnail 1" class="w-full h-20 object-cover rounded">
+                    </div>
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_360x.jpg?v=1741940617')">
+                        <img src="https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_360x.jpg?v=1741940617" alt="Thumbnail 2" class="w-full h-20 object-cover rounded">
+                    </div>
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_360x.jpg?v=1741940617')">
+                        <img src="https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_360x.jpg?v=1741940617" alt="Thumbnail 3" class="w-full h-20 object-cover rounded">
+                    </div>
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_360x.jpg?v=1741940617')">
+                        <img src="https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_360x.jpg?v=1741940617" alt="Thumbnail 4" class="w-full h-20 object-cover rounded">
+                    </div>
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_360x.jpg?v=1741940617')">
+                        <img src="https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_360x.jpg?v=1741940617" alt="Thumbnail 5" class="w-full h-20 object-cover rounded">
+                    </div>
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_360x.jpg?v=1741940617')">
+                        <img src="https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_360x.jpg?v=1741940617" alt="Thumbnail 6" class="w-full h-20 object-cover rounded">
+                    </div>
+                    <div class="product-gallery-thumbnail" onclick="changeImage('https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_360x.jpg?v=1741940617')">
+                        <img src="https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_360x.jpg?v=1741940617" alt="Thumbnail 7" class="w-full h-20 object-cover rounded">
+                    </div>
+                </div>
             </div>
 
-            <!-- Product Section -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden slide-in">
-                <div class="md:flex">
-                    <!-- Gallery Section -->
-                    <div class="md:w-1/2 p-6">
-                        <div class="relative">
-                            <!-- Main Image -->
-                            <div class="bg-white rounded-xl shadow-md flex items-center justify-center h-96 overflow-hidden">
-                                <img id="mainImage" src="https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633" alt="Tank Top Wanita" class="product-gallery-main w-full h-full object-contain">
-                            </div>
-                            
-                            <!-- Navigation Arrows -->
-                            <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-100">
-                                <i class="fas fa-chevron-left text-gray-700"></i>
-                            </button>
-                            <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gray-100">
-                                <i class="fas fa-chevron-right text-gray-700"></i>
-                            </button>
-                        </div>
-                        
-                        <!-- Thumbnails -->
-                        <div class="mt-6 flex space-x-3 overflow-x-auto py-2 px-1" id="thumbnailsContainer">
-                            <img src="https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-primary cursor-pointer active" data-index="0">
-                            <img src="https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_360x.jpg?v=1741940617" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-gray-300 cursor-pointer" data-index="1">
-                            <img src="https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_360x.jpg?v=1741940617" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-gray-300 cursor-pointer" data-index="2">
-                            <img src="https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_360x.jpg?v=1741940617" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-gray-300 cursor-pointer" data-index="3">
-                            <img src="https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_360x.jpg?v=1741940617" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-gray-300 cursor-pointer" data-index="4">
-                            <img src="https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_360x.jpg?v=1741940617" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-gray-300 cursor-pointer" data-index="5">
-                            <img src="https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_360x.jpg?v=1741940617" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-gray-300 cursor-pointer" data-index="6">
-                            <img src="https://greney.com/cdn/shop/files/5_1728dd70-db83-41f4-96b7-63700d0daeab_360x.jpg?v=1741940617" class="gallery-thumb w-16 h-16 object-cover rounded-lg border-2 border-transparent hover:border-gray-300 cursor-pointer" data-index="7">
+            <!-- Product Details -->
+            <div class="lg:w-1/2">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h1 class="text-2xl md:text-3xl font-bold mb-2">Tank Top Wanita dengan Cup Bra Empuk</h1>
+                    <div class="flex items-center mb-4">
+                        <span class="text-primary font-medium mr-2">Produk Original</span>
+                        <span class="text-sm text-gray-500"><i class="fas fa-star text-yellow-400"></i> 4.9 (1.2rb ulasan)</span>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline">
+                            <span class="text-2xl font-bold text-primary">Rp 188.000</span>
+                            <span class="text-lg text-gray-500 ml-3 strikethrough">Rp 250.000</span>
+                            <span class="ml-3 bg-red-100 text-red-700 px-2 py-1 rounded text-sm font-medium">Diskon 25%</span>
                         </div>
                     </div>
                     
-                    <!-- Product Info -->
-                    <div class="md:w-1/2 p-6">
-                        <div class="mb-6">
-                            <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Tank Top Wanita Dengan Cup Bra Empuk</h1>
-                            <div class="flex items-center mb-4">
-                                <div class="text-primary text-xl font-bold">Rp 188.000</div>
-                                <div class="ml-4 bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">BEST SELLER</div>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-3">Warna:</h3>
+                        <div class="flex space-x-4">
+                            <div class="color-option active" onclick="selectColor(this, 'Cokelat')">
+                                <img src="https://greney.com/cdn/shop/files/S1_32939651-1455-45a7-8cda-46cf1ce87214_360x.jpg?v=1741233633" alt="Cokelat" class="w-16 h-16 object-cover rounded-full">
+                                <p class="text-center mt-1 text-sm">Cokelat</p>
                             </div>
-                            <p class="text-gray-600 mb-4">Nyaman dipakai seharian dengan desain stylish yang membuat Anda lebih percaya diri</p>
-                            
-                            <div class="bg-blue-50 rounded-lg p-4 mb-6">
-                                <ul class="space-y-2">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                        <span class="text-gray-700">Bahan Berkualitas Tinggi Terbuat dari bahan premium yang lembut</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                        <span class="text-gray-700">Ringan dan menyerap keringat sehingga tetap nyaman meski dipakai lama</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                        <span class="text-gray-700">Desain modern dengan cup bra empuk untuk kenyamanan maksimal</span>
-                                    </li>
-                                </ul>
+                            <div class="color-option" onclick="selectColor(this, 'Hitam')">
+                                <img src="https://greney.com/cdn/shop/files/S2_198cbf18-d006-4eb7-96df-b75182c1ae00_360x.jpg?v=1741233633" alt="Hitam" class="w-16 h-16 object-cover rounded-full">
+                                <p class="text-center mt-1 text-sm">Hitam</p>
+                            </div>
+                            <div class="color-option" onclick="selectColor(this, 'Kulit')">
+                                <img src="https://greney.com/cdn/shop/files/S3_f0faae34-f108-48f1-a113-1633f0fccff6_360x.jpg?v=1741233633" alt="Kulit" class="w-16 h-16 object-cover rounded-full">
+                                <p class="text-center mt-1 text-sm">Kulit</p>
                             </div>
                         </div>
-                        
-                        <!-- Color Selection -->
-                        <div class="mb-6">
-                            <h3 class="text-lg font-bold mb-3">Pilih Warna</h3>
-                            <div class="flex space-x-4">
-                                <div class="cursor-pointer group">
-                                    <img src="https://greney.com/cdn/shop/files/S1_32939651-1455-45a7-8cda-46cf1ce87214_360x.jpg?v=1741233633" 
-                                         alt="Cokelat" 
-                                         class="w-16 h-16 object-cover rounded-lg border-2 border-transparent group-hover:border-primary">
-                                    <p class="text-sm text-center mt-1">Cokelat</p>
-                                </div>
-                                <div class="cursor-pointer group">
-                                    <img src="https://greney.com/cdn/shop/files/S2_198cbf18-d006-4eb7-96df-b75182c1ae00_360x.jpg?v=1741233633" 
-                                         alt="Hitam" 
-                                         class="w-16 h-16 object-cover rounded-lg border-2 border-transparent group-hover:border-primary">
-                                    <p class="text-sm text-center mt-1">Hitam</p>
-                                </div>
-                                <div class="cursor-pointer group">
-                                    <img src="https://greney.com/cdn/shop/files/S3_f0faae34-f108-48f1-a113-1633f0fccff6_360x.jpg?v=1741233633" 
-                                         alt="Kulit" 
-                                         class="w-16 h-16 object-cover rounded-lg border-2 border-transparent group-hover:border-primary">
-                                    <p class="text-sm text-center mt-1">Kulit</p>
-                                </div>
-                            </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-lg font-semibold">Ukuran:</h3>
+                            <a href="#" class="text-primary text-sm flex items-center">
+                                Panduan Ukuran 
+                                <i class="fas fa-ruler ml-1"></i>
+                            </a>
                         </div>
-
-                        <!-- Size Guide -->
-                        <div class="mb-6">
-                            <h3 class="text-lg font-bold mb-3 cursor-pointer hover:text-primary" id="sizeGuideToggle">
-                                <i class="fas fa-ruler mr-2"></i>Panduan Ukuran
-                            </h3>
-                            <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0g-mbdocssql2opea" alt="Panduan Ukuran" class="w-full rounded-lg border border-gray-200 hidden" id="sizeGuideImage">
+                        <div class="grid grid-cols-4 gap-2">
+                            <div class="size-option active text-center py-2 border rounded cursor-pointer">S</div>
+                            <div class="size-option text-center py-2 border rounded cursor-pointer">M</div>
+                            <div class="size-option text-center py-2 border rounded cursor-pointer">L</div>
+                            <div class="size-option text-center py-2 border rounded cursor-pointer">XL</div>
                         </div>
-
-                        <!-- OrderOnline Embed Code -->
-                        <div class="ooef">
-                            <form class="orderonline-embed-form" data-username="mila" data-product-slug="supportive-tank-top" data-product-id="6873e51da889b6365804a937" id="oo-embed-form-supportive-tank-top-3344" data-origin="orderonline">
-                                <div class="ooef-loader">
-                                    <style>
-                                        .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
-                                        @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
-                                        @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
-                                        .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
-                                        .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
-                                        .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
-                                        @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
-                                        @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
-                                    </style>
-                                    <div aria-live="polite" role="status"><div>Loading...</div></div>
-                                </div>
-                            </form>
-                        </div>
-                        <script>
-                            if (typeof xLogError != 'function') {
-                                var xLogError = function (error) {
-                                    var req = new XMLHttpRequest();
-                                    var payload = JSON.stringify({
-                                        url: document.location.href,
-                                        line: error.line,
-                                        stack: error.stack
-                                    });
-                                    var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
-                                    req.open('POST', 'https://api.orderonline.id/log', true);
-                                    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                                    req.send(params);
-                                };
-                            }
-                            try {
-                                if (typeof xEmbedScript != 'function') {
-                                    var xEmbedScript = function () {
-                                        !function(w, d, e, v, id, t, s) {
-                                            if (d.getElementById(id)) return;
-                                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                                            s = d.getElementsByTagName(e)[0];
-                                            s.parentNode.insertBefore(t, s);
-                                        }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
-                                    };
-                                }
-                                if (typeof xEmbedInit != 'function') {
-                                    var xEmbedInit = function (w, n) {
-                                        if (w.ooe) return;
-                                        n = w.ooe = function() {
-                                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                                        };
-                                        if (!w._ooe) w._ooe = n;
-                                        n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
-                                    };
-                                }
-                                xEmbedInit(window);
-                                ooe('setup', 'redirect', 'https://mila.orderonline.id');
-                                ooe('init', '5f1a7b8fa9bf807da24d83bb', '6873e51da889b6365804a937', '6873e51da889b6365804a938', 'oo-embed-form-supportive-tank-top-3344', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
-                                if (!window.jQuery) {
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-3">Deskripsi Produk:</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Tank top wanita dengan cup bra empuk yang nyaman dipakai</li>
+                            <li>Bahan katun premium yang adem dan menyerap keringat</li>
+                            <li>Desain modern dengan potongan yang pas di badan</li>
+                            <li>Cup bra empuk memberikan bentuk yang natural</li>
+                            <li>Tersedia dalam berbagai warna yang stylish</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- OrderOnline Embed Code - v8.0.4 -->
+                    <div class="ooef">
+                        <form class="orderonline-embed-form" data-username="mila" data-product-slug="supportive-tank-top" data-product-id="6873e51da889b6365804a937" id="oo-embed-form-supportive-tank-top-3344" data-origin="orderonline">
+                            <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                        </form>
+                    </div>
+                    <script>
+                        if (typeof xLogError != 'function') {
+                            var xLogError = function (error) {
+                                var req = new XMLHttpRequest();
+                                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                req.open('POST', 'https://api.orderonline.id/log', true);
+                                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                req.send(params);
+                            };
+                        }
+                        try {
+                            if (typeof xEmbedScript != 'function') {
+                                var xEmbedScript = function () {
                                     !function(w, d, e, v, id, t, s) {
                                         if (d.getElementById(id)) return;
                                         t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                                        t.addEventListener('load', xEmbedScript);
                                         s = d.getElementsByTagName(e)[0];
                                         s.parentNode.insertBefore(t, s);
-                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
-                                } else {
-                                    xEmbedScript();
-                                }
-                            } catch (e) {
-                                xLogError(e);
-                                throw e;
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                };
                             }
-                        </script>
+                            if (typeof xEmbedInit != 'function') {
+                                var xEmbedInit = function (w, n) {
+                                    if (w.ooe) return;
+                                    n = w.ooe = function() {
+                                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                    };
+                                    if (!w._ooe) w._ooe = n;
+                                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                };
+                            }
+                            xEmbedInit(window);
+                            ooe('setup', 'redirect', 'https://mila.orderonline.id');
+                            ooe('init', '5f1a7b8fa9bf807da24d83bb', '6873e51da889b6365804a937', '6873e51da889b6365804a938', 'oo-embed-form-supportive-tank-top-3344', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
+                            if (!window.jQuery) {
+                                !function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                    t.addEventListener('load', xEmbedScript);
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                            } else {
+                                xEmbedScript();
+                            }
+                        } catch (e) {
+                            xLogError(e);
+                            throw e;
+                        }
+                    </script>
+                    <!-- End OrderOnline Embed Code -->
+                    
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-truck text-primary mr-2"></i>
+                        <span>Gratis ongkir untuk pembelian di atas Rp 300.000</span>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Size Chart -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mt-8">
+            <h2 class="text-xl font-bold mb-4">Panduan Ukuran</h2>
+            <img src="https://cdn.shopify.com/s/files/1/0558/2363/0473/files/20250306-120635.jpg?v=1741234077" alt="Panduan Ukuran" class="w-full max-w-2xl mx-auto rounded-lg">
+            <div class="mt-4 text-center">
+                <p class="text-gray-600">* Ukuran dapat berbeda ±1-2cm tergantung cara pengukuran</p>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-6 text-center">Testimonial Pelanggan</h2>
             
-            <!-- Product Benefits -->
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 fade-in">
-                <div class="bg-gray-50 rounded-xl p-6 shadow-md flex items-start">
-                    <div class="text-blue-500 text-2xl mr-4">
-                        <i class="fas fa-truck"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/1200x/a0/24/52/a024520f2e536a3fb6ed15f6b5eff1d3.jpg" alt="Mira" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Mira Y</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-1">Gratis Ongkir</h3>
-                        <p class="text-gray-600">Gratis ongkir untuk pembelian di atas Rp 300.000</p>
+                    <p class="text-gray-700 mb-4">"Bajunya sangat enak dan skin hugging, saya ld sekitar 85 nyaman menggunakan ini."</p>
+                    <div class="testimonial-thumbnail" onclick="openLightbox('https://down-bs-sg.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6kmj4-m8oz9kdbfv23fd.16000051744904342.mp4', 'video')">
+                        <video class="w-full h-40 object-cover rounded-lg" muted>
+                            <source src="https://down-bs-sg.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6kmj4-m8oz9kdbfv23fd.16000051744904342.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl p-6 shadow-md flex items-start">
-                    <div class="text-primary text-2xl mr-4">
-                        <i class="fas fa-shield-alt"></i>
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/51/b2/1f/51b21fec5dd6197dd94f6c81d19171c4.jpg" alt="Siska" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Siska E</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-1">Garansi Kepuasan</h3>
-                        <p class="text-gray-600">Garansi 30 hari uang kembali jika tidak puas</p>
+                    <p class="text-gray-700 mb-4">"Ini yang aku cari2. Selamanya ini cari model tanktop bra yang begini gak da yang cocok. Ini nyaman dn adem dikulit. Bagus bgt👍"</p>
+                    <div class="testimonial-thumbnail" onclick="openLightbox('https://down-id.img.susercontent.com/file/id-11134103-7rbk2-m8oz72xcdavy10.webp', 'image')">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbk2-m8oz72xcdavy10.webp" alt="Testimonial Siska" class="w-full h-40 object-cover rounded-lg">
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-xl p-6 shadow-md flex items-start">
-                    <div class="text-primary text-2xl mr-4">
-                        <i class="fas fa-headset"></i>
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/42/cb/cc/42cbcc9f402a43f3167622e775f43930.jpg" alt="Nur" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Nur</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-lg mb-1">Dukungan Pelanggan</h3>
-                        <p class="text-gray-600">Tim dukungan siap membantu 24/7 via WhatsApp</p>
+                    <p class="text-gray-700 mb-4">"Bahan bagus adem nyaman dipake tidak panas desain yang menarik unik dan lucu bakal jadi laganan nih"</p>
+                    <div class="testimonial-thumbnail" onclick="openLightbox('https://down-zl-sg.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6kmj0-m9swqsv6v2u57e.16000051747321683.mp4', 'video')">
+                        <video class="w-full h-40 object-cover rounded-lg" muted>
+                            <source src="https://down-zl-sg.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6kmj0-m9swqsv6v2u57e.16000051747321683.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/d0/78/34/d07834dbe10c11c4015a5d830a5fc28d.jpg" alt="Mita" class="w-12 h-12 rounded-full object-cover">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Mita</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Langganan aku , sampe kaya pengen semua prod nya greney , udah nyaman sama toko ini next order lagi dan lagi"</p>
+                    <div class="testimonial-thumbnail" onclick="openLightbox('https://down-id.img.susercontent.com/file/id-11134103-7rbk3-m9ignovhijv5f9.webp', 'image')">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134103-7rbk3-m9ignovhijv5f9.webp" alt="Testimonial Mita" class="w-full h-40 object-cover rounded-lg">
                     </div>
                 </div>
             </div>
-            
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-12">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <h3 class="text-xl font-bold mb-2">greney.underwear.id</h3>
-                <p class="text-gray-400 mb-4">Solusi Pakaian Dalam Wanita Berkualitas Tinggi</p>
-                
-                <div class="flex justify-center space-x-4 mb-6">
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white">
-                        <i class="fab fa-facebook text-xl"></i>
-                    </a>
-                </div>
-                
-                <p class="text-gray-400 text-sm">&copy; 2025 greney.underwear.id. Powered by nexcostore.</p>
-            </div>
-        </div>
-    </footer>
-    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div id="lightboxContent" class="lightbox-content"></div>
+    </div>
+
     <script>
-        // Gallery functionality
-        const galleryImages = [
-            "https://greney.com/cdn/shop/files/1_e6c3cda4-4b9d-44de-b2fd-0aef11aaeaf4_720x.jpg?v=1741233633",
-            "https://greney.com/cdn/shop/files/2_c6270156-9c8c-4b47-a8a3-a1291eea6ede_360x.jpg?v=1741940617",
-            "https://greney.com/cdn/shop/files/3_1e308fac-7866-4a61-9ff6-1815bb170304_360x.jpg?v=1741940617",
-            "https://greney.com/cdn/shop/files/6_8a7731f4-d841-4184-8cd6-1abf7c9ed074_360x.jpg?v=1741940617",
-            "https://greney.com/cdn/shop/files/7_ccc1e5f7-381d-4fb7-ad72-5633285e8cdf_360x.jpg?v=1741940617",
-            "https://greney.com/cdn/shop/files/8_a88e105e-b915-4e07-b5c6-9c7223bc4584_360x.jpg?v=1741940617",
-            "https://greney.com/cdn/shop/files/4_d3e2fada-d773-4413-8ffe-2e55c9e03cd9_360x.jpg?v=1741940617",
-            "https://greney.com/cdn/shop/files/5_1728dd70-db83-41f4-96b7-63700d0daeab_360x.jpg?v=1741940617"
-        ];
-        
-        let currentImageIndex = 0;
-        const mainImage = document.getElementById('mainImage');
-        const thumbnails = document.querySelectorAll('.gallery-thumb');
-        
-        function updateGallery(index) {
-            currentImageIndex = index;
-            mainImage.src = galleryImages[index];
+        // Product gallery functionality
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
             
             // Update active thumbnail
-            thumbnails.forEach((thumb, i) => {
-                if (i === index) {
-                    thumb.classList.add('active');
-                    thumb.classList.remove('border-transparent');
-                    thumb.classList.add('border-primary');
-                } else {
-                    thumb.classList.remove('active');
-                    thumb.classList.add('border-transparent');
-                    thumb.classList.remove('border-primary');
-                }
-            });
+            const thumbnails = document.querySelectorAll('.product-gallery-thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            event.currentTarget.classList.add('active');
         }
         
-        // Thumbnail click event
-        thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', () => {
-                const index = parseInt(thumb.getAttribute('data-index'));
-                updateGallery(index);
-            });
-        });
-        
-        // Navigation buttons
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            let newIndex = currentImageIndex - 1;
-            if (newIndex < 0) newIndex = galleryImages.length - 1;
-            updateGallery(newIndex);
-        });
-        
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            let newIndex = currentImageIndex + 1;
-            if (newIndex >= galleryImages.length) newIndex = 0;
-            updateGallery(newIndex);
-        });
-        
-        // Quantity controls
-        document.getElementById('decreaseQty').addEventListener('click', () => {
-            const qtyInput = document.getElementById('qty');
-            let qty = parseInt(qtyInput.value);
-            if (qty > 1) {
-                qtyInput.value = qty - 1;
-                updateOrderSummary();
-            }
-        });
-        
-        document.getElementById('increaseQty').addEventListener('click', () => {
-            const qtyInput = document.getElementById('qty');
-            let qty = parseInt(qtyInput.value);
-            if (qty < 10) {
-                qtyInput.value = qty + 1;
-                updateOrderSummary();
-            }
-        });
-        
-        document.getElementById('qty').addEventListener('change', updateOrderSummary);
-        
-        // Payment method selection
-        document.getElementById('btnTf').addEventListener('click', () => {
-            document.getElementById('btnTf').classList.add('bg-primary', 'text-white');
-            document.getElementById('btnTf').classList.remove('bg-gray-200', 'text-gray-700');
-            document.getElementById('btnCod').classList.add('bg-gray-200', 'text-gray-700');
-            document.getElementById('btnCod').classList.remove('bg-primary', 'text-white');
-            updateOrderSummary();
-        });
-        
-        document.getElementById('btnCod').addEventListener('click', () => {
-            document.getElementById('btnCod').classList.add('bg-primary', 'text-white');
-            document.getElementById('btnCod').classList.remove('bg-gray-200', 'text-gray-700');
-            document.getElementById('btnTf').classList.add('bg-gray-200', 'text-gray-700');
-            document.getElementById('btnTf').classList.remove('bg-primary', 'text-white');
-            updateOrderSummary();
-        });
-        
-        // Order summary update
-        const PRODUCT_PRICE = 188000;
-        
-        function updateOrderSummary() {
-            const qty = parseInt(document.getElementById('qty').value);
-            const subtotal = PRODUCT_PRICE * qty;
-            const uniqueCode = Math.floor(Math.random() * 900) + 100; // Random 3-digit number
+        // Color selection
+        function selectColor(element, colorName) {
+            const colors = document.querySelectorAll('.color-option');
+            colors.forEach(color => color.classList.remove('active'));
+            element.classList.add('active');
             
-            // Update display
-            document.getElementById('unitPriceDisplay').textContent = `Rp ${PRODUCT_PRICE.toLocaleString('id-ID')}`;
-            document.getElementById('quantityDisplay').textContent = `${qty} pcs`;
-            document.getElementById('subtotal').textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
-            document.getElementById('uniqueCode').textContent = `+Rp ${uniqueCode}`;
-            
-            // Calculate total
-            const total = subtotal + uniqueCode;
-            document.getElementById('total').textContent = `Rp ${total.toLocaleString('id-ID')}`;
+            // Here you would typically update product details based on color
+            console.log('Selected color:', colorName);
         }
         
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            updateGallery(0);
-            updateOrderSummary();
-            
-            // Set TF as default payment method
-            document.getElementById('btnTf').click();
-
-            // Size guide toggle
-            document.getElementById('sizeGuideToggle').addEventListener('click', function(e) {
-                e.preventDefault();
-                const img = document.getElementById('sizeGuideImage');
-                if (img.classList.contains('hidden')) {
-                    img.classList.remove('hidden');
-                    img.classList.add('block');
-                } else {
-                    img.classList.add('hidden');
-                    img.classList.remove('block');
-                }
+        // Size selection
+        document.querySelectorAll('.size-option').forEach(size => {
+            size.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
             });
         });
         
-        // Form submission
-        document.getElementById('whatsappBtn').addEventListener('click', () => {
-            const name = document.getElementById('customerName').value;
-            const phone = document.getElementById('customerPhone').value;
-            const address = document.getElementById('customerAddress').value;
+        // Quantity update
+        function updateQuantity(change) {
+            const quantityInput = document.getElementById('quantity');
+            let quantity = parseInt(quantityInput.value);
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            quantityInput.value = quantity;
+        }
+        
+        // Lightbox functionality
+        function openLightbox(src, type) {
+            const lightbox = document.getElementById('lightbox');
+            const content = document.getElementById('lightboxContent');
             
-            if (!name || !phone || !address) {
-                alert('Mohon lengkapi nama, nomor WhatsApp, dan alamat lengkap');
-                return;
+            if (type === 'image') {
+                content.innerHTML = `<img src="${src}" alt="Full size testimonial" class="lightbox-content">`;
+            } else if (type === 'video') {
+                content.innerHTML = `
+                    <video class="lightbox-video" controls autoplay>
+                        <source src="${src}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                `;
             }
             
-            const color = document.getElementById('colorSelect').value || '-';
-            const size = document.getElementById('sizeSelect').value || '-';
-            const qty = document.getElementById('qty').value;
-            const notes = document.getElementById('customerNotes').value;
-            
-            const message = `Halo, saya ingin memesan Tank Top Wanita Dengan Cup Bra Empuk:
-            
-📋 Detail Pesanan:
-- Warna: ${color}
-- Ukuran: ${size}
-- Jumlah: ${qty} pcs
-- Catatan: ${notes || '-'}
-
-👤 Data Penerima:
-- Nama: ${name}
-- WhatsApp: ${phone}
-- Alamat: ${address}
-
-Mohon konfirmasi ketersediaan dan total pembayaran. Terima kasih!`;
-
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/6281225681788?text=${encodedMessage}`;
-            
-            window.open(whatsappUrl, '_blank');
+            lightbox.style.display = 'flex';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+            const content = document.getElementById('lightboxContent');
+            content.innerHTML = '';
+        }
+        
+        // Close lightbox when clicking outside content
+        window.addEventListener('click', function(event) {
+            const lightbox = document.getElementById('lightbox');
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
         });
     </script>
 </body>
